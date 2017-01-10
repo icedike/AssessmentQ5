@@ -14,6 +14,11 @@ class AddPhotoViewController: UIViewController {
     @IBOutlet weak var photoTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // show camera 
+        let controller = UIImagePickerController()
+        controller.sourceType = .camera
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
 
         // Do any additional setup after loading the view.
     }

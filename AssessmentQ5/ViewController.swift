@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var photoTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +20,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+//    @IBAction func AddPhotoBtn(_ sender: UIBarButtonItem) {
+//        let controller = UIImagePickerController()
+//        controller.sourceType = .camera
+//        controller.delegate = self
+//        present(controller, animated: true) { 
+//            let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddPhotoViewController") as! AddPhotoViewController
+//            self.navigationController?.pushViewController(view, animated: true)
+//        }
+//    }
 
 
 }
