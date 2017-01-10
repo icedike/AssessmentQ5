@@ -1,0 +1,6 @@
+framework module Pods_AssessmentQ5 {
+  umbrella header "Pods-AssessmentQ5-umbrella.h"
+
+  export *
+  module * { export * }
+}
