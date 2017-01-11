@@ -16,20 +16,23 @@ class AddPhotoViewController: UIViewController {
         super.viewDidLoad()
         // show camera 
         let controller = UIImagePickerController()
-        controller.sourceType = .camera
+        //switch to pick picture from album
+        //controller.sourceType = .camera
+        controller.sourceType = .photoLibrary
         controller.delegate = self
         present(controller, animated: true, completion: nil)
-
+        navigationController?.delegate = self
         // Do any additional setup after loading the view.
     }
-
+    
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if (self.isMovingFromParentViewController) {
-            
+        if(self.isMovingFromParentViewController){
+            let newPhoto = PhotoData(photoImage: photoImage.image, photoDescription: photoTextField.text)
+            NotificationCenter.default.post(name: NSNotification.Name("newPhoto"), object: nil, userInfo: ["photoData":newPhoto])
         }
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
