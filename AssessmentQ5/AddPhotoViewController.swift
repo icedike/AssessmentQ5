@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class AddPhotoViewController: UIViewController {
+    
+    //create coredata constant
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let nameEntity = "Photo"
 
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var photoTextField: UITextField!
@@ -29,6 +34,25 @@ class AddPhotoViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if(self.isMovingFromParentViewController){
+            
+            //write data to coredata
+            let photo = NSEntityDescription.insertNewObject(forEntityName: nameEntity, into: context) as! Photo
+            photo.imageDS = photoTextField.text
+            
+            //turn image to data for saving in coreData
+            guard let imagedata = UIImageJPEGRepresentation(photoImage.image!, 1) else{
+                print("jpeg error")
+                return
+            }
+            photo.image = NSData(data:imagedata)
+            
+            do {
+                try context.save()
+            } catch {
+                print("save failed")
+            }
+            
+            
             let newPhoto = PhotoData(photoImage: photoImage.image, photoDescription: photoTextField.text)
             NotificationCenter.default.post(name: NSNotification.Name("newPhoto"), object: nil, userInfo: ["photoData":newPhoto])
         }
