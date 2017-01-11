@@ -24,6 +24,27 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            //delte from coredata
+            let context = DataManger.share.mainContext
+            let deleteData = context.object(with: photoDataArray[indexPath.row].id) as! Photo
+            context.delete(deleteData)
+            
+            do {
+                try context.save()
+            } catch {
+                print("delete data fail")
+            }
+            
+            //update array
+            photoDataArray.remove(at: indexPath.row)
+            //update table
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
 extension ViewController{

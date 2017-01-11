@@ -19,6 +19,7 @@
 		4C337CEC1E24CE86001644F4 /* AddPhotoViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C337CEB1E24CE86001644F4 /* AddPhotoViewControllerExtension.swift */; };
 		4C5BF8931E26308E00EF83E1 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BF8911E26308E00EF83E1 /* Photo+CoreDataClass.swift */; };
 		4C5BF8941E26308E00EF83E1 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BF8921E26308E00EF83E1 /* Photo+CoreDataProperties.swift */; };
+		4C5BF8961E26A1BE00EF83E1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BF8951E26A1BE00EF83E1 /* DataManager.swift */; };
 		4CDACFD41E25DE5F007BA40A /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDACFD31E25DE5F007BA40A /* PhotoData.swift */; };
 		4D4DD2B3ECFCDA93BE93FE8F /* Pods_AssessmentQ5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5CD3601F2BB611A56054A6 /* Pods_AssessmentQ5.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		4C337CEB1E24CE86001644F4 /* AddPhotoViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewControllerExtension.swift; sourceTree = "<group>"; };
 		4C5BF8911E26308E00EF83E1 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataClass.swift"; path = "AssessmentQ5/Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4C5BF8921E26308E00EF83E1 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "AssessmentQ5/Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4C5BF8951E26A1BE00EF83E1 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4CDACFD31E25DE5F007BA40A /* PhotoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
 		823FC14BA0D7D3E469B8DAAC /* Pods-AssessmentQ5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssessmentQ5.release.xcconfig"; path = "Pods/Target Support Files/Pods-AssessmentQ5/Pods-AssessmentQ5.release.xcconfig"; sourceTree = "<group>"; };
 		BB5CD3601F2BB611A56054A6 /* Pods_AssessmentQ5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssessmentQ5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				4C337CEB1E24CE86001644F4 /* AddPhotoViewControllerExtension.swift */,
 				4C337CE71E24BEDC001644F4 /* PhotoTableViewCell.swift */,
 				4CDACFD31E25DE5F007BA40A /* PhotoData.swift */,
+				4C5BF8951E26A1BE00EF83E1 /* DataManager.swift */,
 			);
 			path = AssessmentQ5;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				4C337CD11E24B2D1001644F4 /* AppDelegate.swift in Sources */,
 				4C5BF8931E26308E00EF83E1 /* Photo+CoreDataClass.swift in Sources */,
 				4CDACFD41E25DE5F007BA40A /* PhotoData.swift in Sources */,
+				4C5BF8961E26A1BE00EF83E1 /* DataManager.swift in Sources */,
 				4C5BF8941E26308E00EF83E1 /* Photo+CoreDataProperties.swift in Sources */,
 				4C337CD91E24B2D1001644F4 /* AssessmentQ5.xcdatamodeld in Sources */,
 			);

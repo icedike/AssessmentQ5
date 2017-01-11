@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class PhotoData{
     var photoImage:UIImage?
     var photoDescription:String?
-    init(photoImage:UIImage?, photoDescription:String?){
+    var id:NSManagedObjectID
+    init(photoImage:UIImage?, photoDescription:String?, id:NSManagedObjectID){
         self.photoImage = photoImage
         self.photoDescription = photoDescription
+        self.id = id
     }
 }

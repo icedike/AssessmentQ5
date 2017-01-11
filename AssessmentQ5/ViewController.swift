@@ -15,7 +15,6 @@ class ViewController: UIViewController {
 //    var descriptionArray:[String] = []
     
     //create coredata constant
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let nameEntity = "Photo"
     
     var photoDataArray:[PhotoData] = []
@@ -30,23 +29,29 @@ class ViewController: UIViewController {
         photoTableView.dataSource = self
         
         //read data from coredata
+        let context = DataManger.share.mainContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: nameEntity)
         do {
-             let results = try context.fetch(request) as! [Photo]
+            let results = try context.fetch(request) as! [Photo]
             if results.count > 0 {
                 print("\(results.count) saved in coredata")
                 for result in results {
                     
                     let image = UIImage(data:(result.image as! Data))
                     let description = result.imageDS
-                    let newPhoto = PhotoData(photoImage: image, photoDescription: description)
+                    let newPhoto = PhotoData(photoImage: image, photoDescription: description, id: result.objectID)
                     photoDataArray.append(newPhoto)
+                    
+                    //context.delete(result)
                 }
             }
+            //try context.save()
         } catch {
             print("read photo data failed")
         }
        
+        
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
