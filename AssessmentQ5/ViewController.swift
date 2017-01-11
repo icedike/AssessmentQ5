@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var imageArray:[UIImage] = []
+    var descriptionArray:[String] = []
     @IBOutlet weak var photoTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
