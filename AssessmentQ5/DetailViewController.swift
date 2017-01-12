@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
         //detailScrollView.contentSize = detailScrollView.bounds.size
         
         photoImageView.image = detailPhoto.photoImage
+        photoImageView.contentMode = .scaleAspectFit
         photoDescriptionLabel.text = detailPhoto.photoDescription
         detailScrollView.addSubview(photoImageView)
         
