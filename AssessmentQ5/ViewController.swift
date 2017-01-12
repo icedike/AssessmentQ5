@@ -44,6 +44,7 @@ class ViewController: UIViewController {
                     
                     //context.delete(result)
                 }
+                photoDataArray.reverse()
             }
             //try context.save()
         } catch {

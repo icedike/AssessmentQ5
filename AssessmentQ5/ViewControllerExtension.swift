@@ -25,6 +25,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return 100
     }
     
+    //delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
@@ -44,6 +45,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             //update table
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        view.detailPhoto = photoDataArray[indexPath.row]
+        navigationController?.pushViewController(view, animated: true)
     }
 }
 
