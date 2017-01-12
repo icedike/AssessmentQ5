@@ -30,6 +30,8 @@ class DetailViewController: UIViewController {
         detailScrollView.maximumZoomScale = 4
         detailScrollView.minimumZoomScale = 0.2
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.sharePhoto))
+        
         // Do any additional setup after loading the view.
     }
 

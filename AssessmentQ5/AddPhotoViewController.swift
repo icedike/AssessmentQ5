@@ -21,11 +21,15 @@ class AddPhotoViewController: UIViewController {
         // show camera 
         let controller = UIImagePickerController()
         //switch to pick picture from album
-        //controller.sourceType = .camera
-        controller.sourceType = .photoLibrary
+        controller.sourceType = .camera
+        //controller.sourceType = .photoLibrary
         controller.delegate = self
         present(controller, animated: true, completion: nil)
         navigationController?.delegate = self
+        
+        //textfield delegate
+        photoTextField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     

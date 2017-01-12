@@ -24,3 +24,13 @@ extension DetailViewController:UIScrollViewDelegate{
         
     }
 }
+
+extension DetailViewController{
+    func sharePhoto(){
+        print("share photo")
+        let shareItem :[Any] = [photoImageView.image!,photoDescriptionLabel.text!]
+        let shareController = UIActivityViewController(activityItems: shareItem, applicationActivities: nil)
+        shareController.popoverPresentationController?.sourceView = self.view
+        present(shareController, animated: true, completion: nil)
+    }
+}
