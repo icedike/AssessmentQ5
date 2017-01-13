@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class AddPhotoViewController: UIViewController {
     
@@ -16,19 +17,37 @@ class AddPhotoViewController: UIViewController {
 
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var photoTextField: UITextField!
+    var isCancel = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        // show camera 
-        let controller = UIImagePickerController()
-        //switch to pick picture from album
-        controller.sourceType = .camera
-        //controller.sourceType = .photoLibrary
-        controller.delegate = self
-        present(controller, animated: true, completion: nil)
-        navigationController?.delegate = self
         
-        //textfield delegate
-        photoTextField.delegate = self
+        //check user allow to use camera
+        if AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) == AVAuthorizationStatus.authorized{
+            // show camera
+            let controller = UIImagePickerController()
+            //switch to pick picture from album
+            controller.sourceType = .camera
+            //controller.sourceType = .photoLibrary
+            controller.delegate = self
+            present(controller, animated: true, completion: nil)
+            navigationController?.delegate = self
+            
+            //textfield delegate
+            photoTextField.delegate = self
+        }else{
+            let alert = UIAlertController(title: "Failed to access camera", message: "Please agree to use camera in setting", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+                (action) in
+                self.isCancel = true
+                _ = self.navigationController?.popViewController(animated: true)
+            })
+            
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
+        
+
         
         // Do any additional setup after loading the view.
     }
@@ -36,7 +55,7 @@ class AddPhotoViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if(self.isMovingFromParentViewController){
+        if(self.isMovingFromParentViewController) && !isCancel{
             
             //write data to coredata
             let context = DataManger.share.mainContext

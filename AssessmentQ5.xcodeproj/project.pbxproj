@@ -156,7 +156,7 @@
 				TargetAttributes = {
 					4C337CCC1E24B2D1001644F4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BM77L4NJ9K;
+						DevelopmentTeam = 26B57L9T22;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -381,13 +381,14 @@
 			baseConfigurationReference = DE6EDC21E55E49B16E2C4803 /* Pods-AssessmentQ5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BM77L4NJ9K;
+				DEVELOPMENT_TEAM = 26B57L9T22;
 				INFOPLIST_FILE = AssessmentQ5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.markrobotdesign.AssessmentQ5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.markrobotdesign.UrAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -396,13 +397,14 @@
 			baseConfigurationReference = 823FC14BA0D7D3E469B8DAAC /* Pods-AssessmentQ5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BM77L4NJ9K;
+				DEVELOPMENT_TEAM = 26B57L9T22;
 				INFOPLIST_FILE = AssessmentQ5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.markrobotdesign.AssessmentQ5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.markrobotdesign.UrAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

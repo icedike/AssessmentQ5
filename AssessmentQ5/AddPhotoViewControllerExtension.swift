@@ -14,8 +14,14 @@ extension AddPhotoViewController: UIImagePickerControllerDelegate, UINavigationC
             //don't save image to album
             //UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
         }
+        isCancel = false
         dismiss(animated: true, completion: nil)
     }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        isCancel = true
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
 }
 extension AddPhotoViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
