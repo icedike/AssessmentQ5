@@ -35,16 +35,39 @@ class AddPhotoViewController: UIViewController {
             //textfield delegate
             photoTextField.delegate = self
         }else{
-            let alert = UIAlertController(title: "Failed to access camera", message: "Please agree to use camera in setting", preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
-                (action) in
-                self.isCancel = true
-                _ = self.navigationController?.popViewController(animated: true)
+            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted) in
+                if granted{
+                    // show camera
+                    let controller = UIImagePickerController()
+                    //switch to pick picture from album
+                    controller.sourceType = .camera
+                    //controller.sourceType = .photoLibrary
+                    controller.delegate = self
+                    DispatchQueue.main.async {
+                        self.present(controller, animated: true, completion: nil)
+                    }
+                    self.navigationController?.delegate = self
+                    
+                    //textfield delegate
+                    self.photoTextField.delegate = self
+                }else{
+                    let alert = UIAlertController(title: "Failed to access camera", message: "Please agree to use camera in setting", preferredStyle: .alert)
+                    
+                    let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+                        (action) in
+                        self.isCancel = true
+                        _ = self.navigationController?.popViewController(animated: true)
+                    })
+                    
+                    alert.addAction(okAction)
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                
+                }
             })
             
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
         }
         
 
