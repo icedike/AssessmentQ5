@@ -11,8 +11,28 @@ extension AddPhotoViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
             photoImage.image = pickedImage
-            UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
+            //don't save image to album
+            //UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
         }
+        isCancel = false
         dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        isCancel = true
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+}
+extension AddPhotoViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension AddPhotoViewController{
+    //exit keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
