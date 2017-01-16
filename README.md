@@ -1,5 +1,5 @@
-# AssessmentQ5
 ![](https://travis-ci.org/icedike/AssessmentQ5.svg?branch=master)  
+# AssessmentQ5
 **Solution**  
 1. Added a tableview with custom tableview cell. The custom cell contained a UIImage and a Label to save the photo user took and the description correspondingly.   
 2. Tapped the plus button to make users take the picture. Check whether uses allowed to use the camera. If users don't allow to use the camera or cancel taking a photo, back to the previous view controller. Reference:<http://stackoverflow.com/questions/27646107/how-to-check-if-the-user-gave-permission-to-use-the-camera>   
