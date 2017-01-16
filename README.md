@@ -10,5 +10,10 @@
 **Objects**  
 UIViewController, NavigationViewController, UITableView, UIImagePickerController, CoreData, NotificationCenter, ScrollView, UIActivityViewController, UIAlertViewController.
 
-**Demo**
+**Demo**  
+![](https://github.com/icedike/AssessmentQ5/blob/master/README/takePhoto.gif)
+![](https://github.com/icedike/AssessmentQ5/blob/master/README/zoomShare.gif)
 
+
+[**Available on the Apple Store:私密相簿**](https://itunes.apple.com/us/app/si-mi-xiang-bu/id1194567359?ls=1&mt=8)  
+![](https://github.com/icedike/AssessmentQ5/blob/master/README/camerax2.png)
