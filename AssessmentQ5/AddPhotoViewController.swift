@@ -82,7 +82,13 @@ class AddPhotoViewController: UIViewController {
             
             //write data to coredata
             let context = DataManger.share.mainContext
-            let photo = NSEntityDescription.insertNewObject(forEntityName: nameEntity, into: context) as! Photo
+            let photo:Photo
+            if #available(iOS 10.0, *) {
+                 photo = Photo(context: context)
+            } else {
+                 photo = NSEntityDescription.insertNewObject(forEntityName: nameEntity, into: context) as! Photo
+                
+            }
             photo.imageDS = photoTextField.text
             //turn image to data for saving in coreData
             guard let imagedata = UIImageJPEGRepresentation(photoImage.image!, 1) else{

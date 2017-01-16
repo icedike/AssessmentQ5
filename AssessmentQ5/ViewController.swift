@@ -30,9 +30,10 @@ class ViewController: UIViewController {
         
         //read data from coredata
         let context = DataManger.share.mainContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: nameEntity)
+        let request:NSFetchRequest<Photo> = Photo.fetchRequest()
+        //let request = NSFetchRequest<NSFetchRequestResult>(entityName: nameEntity)
         do {
-            let results = try context.fetch(request) as! [Photo]
+            let results = try context.fetch(request)
             if results.count > 0 {
                 print("\(results.count) saved in coredata")
                 for result in results {

@@ -4,5 +4,13 @@
 2. Tapped the plus button to make users take the picture. Check whether uses allowed to use the camera. If users don't allow to use the camera or cancel taking a photo, back to the previous view controller. Reference:<http://stackoverflow.com/questions/27646107/how-to-check-if-the-user-gave-permission-to-use-the-camera>   
 3. Use notification center to inform table view to update data of the cell when user taped back button.  
 4. Use scroll view controller to zoom the image. Reference:<http://www.appcoda.com.tw/uiscrollview-introduction/>  
-5. Use UIActivityViewController to handle the share function. Reference:<http://www.appcoda.com.tw/social-framework-introduction/>
+5. Use UIActivityViewController to handle the share function. Reference:<http://www.appcoda.com.tw/social-framework-introduction/>  
 6. Use CoreData to save, delete photos. Have the ability to keep data. Reference:<http://www.swiftcoder.club/swift-3-core-data-operations/>
+
+**Objects**  
+UIViewController, NavigationViewController, UITableView, UIImagePickerController, CoreData, NotificationCenter, ScrollView, UIActivityViewController, UIAlertViewController.
+
+**Demo**
+
+
+[Available on the Apple Store 01/13/2017](https://itunes.apple.com/us/app/si-mi-xiang-bu/id1194567359?ls=1&mt=8)

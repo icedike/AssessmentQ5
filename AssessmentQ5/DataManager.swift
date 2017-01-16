@@ -11,9 +11,15 @@ import UIKit
 import CoreData
 
 class DataManger{
+    private init(){
+    }
+    
+    
     static let share = DataManger()
     lazy var mainContext:NSManagedObjectContext = {
         let mangerContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         return mangerContext
     }()
+
+    
 }
