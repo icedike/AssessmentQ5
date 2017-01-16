@@ -12,5 +12,3 @@ UIViewController, NavigationViewController, UITableView, UIImagePickerController
 
 **Demo**
 
-
-[Available on the Apple Store 01/13/2017](https://itunes.apple.com/us/app/si-mi-xiang-bu/id1194567359?ls=1&mt=8)
