@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C337CCC1E24B2D1001644F4"
-               BuildableName = "AssessmentQ5.app"
-               BlueprintName = "AssessmentQ5"
-               ReferencedContainer = "container:AssessmentQ5.xcodeproj">
+               BlueprintIdentifier = "511C8C43974BF980E3DDFC85EA96E4F3"
+               BuildableName = "INSPersistentContainer.framework"
+               BlueprintName = "INSPersistentContainer"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C337CCC1E24B2D1001644F4"
-            BuildableName = "AssessmentQ5.app"
-            BlueprintName = "AssessmentQ5"
-            ReferencedContainer = "container:AssessmentQ5.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C337CCC1E24B2D1001644F4"
-            BuildableName = "AssessmentQ5.app"
-            BlueprintName = "AssessmentQ5"
-            ReferencedContainer = "container:AssessmentQ5.xcodeproj">
+            BlueprintIdentifier = "511C8C43974BF980E3DDFC85EA96E4F3"
+            BuildableName = "INSPersistentContainer.framework"
+            BlueprintName = "INSPersistentContainer"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C337CCC1E24B2D1001644F4"
-            BuildableName = "AssessmentQ5.app"
-            BlueprintName = "AssessmentQ5"
-            ReferencedContainer = "container:AssessmentQ5.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
